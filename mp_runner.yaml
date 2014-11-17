@@ -1,0 +1,5 @@
+process_count: 6
+training_file: train.tab
+test_file: test.tab
+classifier_module: stacking_classifier
+pickled_classifier_path: classifier.pickle

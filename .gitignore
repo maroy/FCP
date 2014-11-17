@@ -52,3 +52,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+/tmp/
+/out.csv
+/train.csv
+/train.tab
+/test.csv
+/test.tab

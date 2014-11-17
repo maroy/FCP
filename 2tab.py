@@ -40,7 +40,7 @@ def to_tab(is_training, is_raw, in_path, add_cover_type):
     perfection = {}
 
     if add_cover_type:
-        with open('../Data/perfectSubmission.csv', 'rb') as perfect:
+        with open('perfectSubmission.csv', 'rb') as perfect:
             items = [line.strip().split(',') for line in perfect.readlines()]
             for item in items:
                 perfection[item[0]] = item[1]

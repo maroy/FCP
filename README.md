@@ -26,7 +26,7 @@ To run the classification:
 2. To generate the train.tab file:<br />
 	`python 2tab.py True False train.csv`
 3. To generate the test.tab file:<br />
-	`python 2tab.py False False test.csv True`
+	`python 2tab.py False False test.csv`
 4. To run the actual classification:<br />
 	`python mp_runner.py`
 

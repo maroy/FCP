@@ -48,6 +48,9 @@ def to_tab(is_training, is_raw, in_path, add_cover_type):
         for sample in sample_set:
             sample.Cover_Type = perfection[str(sample.Id)]
 
+    if not (is_training or add_cover_type):
+        del columns[-1]
+
     with open(out_path, 'w') as f:
         for i in range(0,3):
             f.write("\t".join([col[i] for col in columns]) + "\n")

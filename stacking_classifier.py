@@ -1,7 +1,11 @@
 import Orange
 
+def cb(x):
+    print "Progress: ", x
+
 
 class Classifier:
+
 
     def __init__(self):
 
@@ -12,7 +16,7 @@ class Classifier:
             Orange.classification.tree.TreeLearner(max_depth=225)
         ]
 
-        meta_learner=Orange.classification.neural.NeuralNetworkLearner()
+        meta_learner=Orange.ensemble.forest.RandomForestLearner(trees=200, attributes=7)
 
         self.learner = Orange.ensemble.stacking.StackedClassificationLearner(base_learners, meta_learner=meta_learner)
         self.classifier = None
